@@ -2,20 +2,20 @@ import { React, useState, useEffect, useContext} from "react";
 import { useLocation } from "react-router-dom";
 import githubIcon from "../Images/githubIcon.png";
 import linkedinIcon from "../Images/linkedinIcon.png";
-import { StateContext } from "../App";
 
 
 function Header() {
   const [active, setActive] = useState("");
   useEffect(()=>{
-    let nav1 = document.getElementById("1");
-    let class1 = nav1.className;
+    const nav1 = document.getElementById("1");
+    const class1 = nav1.className;
     if (class1 === "nav-active") {
        setActive("bright")
     } else {
       setActive("dull")
     };
-  }, []);
+    
+  }, []) ;
 
   return (
     <header className="header">
