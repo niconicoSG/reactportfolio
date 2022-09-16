@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-
+import Header from "./Pages/Header";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,7 +14,7 @@ import About from "./Pages/About";
 import Work from "./Pages/Work";
 import Contact from "./Pages/Contact";
 import ErrorPage from "./Pages/ErrorPage";
-import Header from "./Pages/Header";
+
 
 export const StateContext = React.createContext();
 
