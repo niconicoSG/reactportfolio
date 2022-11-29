@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import {
   BrowserRouter as Router,
@@ -16,15 +16,28 @@ import Contact from "./Pages/Contact";
 import ErrorPage from "./Pages/ErrorPage";
 import Header from "./Pages/Header";
 
-export const StateContext = React.createContext();
+// export const StateContext = React.createContext();
 
  export default function App() {
-  
+
+  const StateContext = React.createContext();
+
+  const [active, setActive] = useState("");
+  useEffect(()=>{
+    const nav1 = document.getElementById("1");
+    const class1 = nav1.className;
+    if (class1 === "nav-active") {
+       setActive("bright")
+    } else {
+      setActive("dull")
+    };
+    
+  }, []) ;
+
   return (
     <Router>
       <StateContext.Provider value="">
         <Header />
-      </StateContext.Provider>
       <div className="container">
         <div className="pages">
           <Routes>
@@ -74,6 +87,7 @@ export const StateContext = React.createContext();
           </NavLink>
         </nav>
       </div>
+       </StateContext.Provider>
     </Router>
   );
 }
