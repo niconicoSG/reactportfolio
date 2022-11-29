@@ -15,7 +15,7 @@ function Header() {
       setActive("dull")
     };
     
-  }, [active]) ;
+  }, []) ;
 
   return (
     <header className="header">
