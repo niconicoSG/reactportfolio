@@ -16,27 +16,28 @@ import Contact from "./Pages/Contact";
 import ErrorPage from "./Pages/ErrorPage";
 import Header from "./Pages/Header";
 
-// export const StateContext = React.createContext();
+export const StateContext = React.createContext();
 
  export default function App() {
 
-  const StateContext = React.createContext();
-
-  const [active, setActive] = useState("");
-  useEffect(()=>{
-    const nav1 = document.getElementById("1");
-    const class1 = nav1.className;
-    if (class1 === "nav-active") {
-       setActive("bright")
-    } else {
-      setActive("dull")
-    };
+  const nav1 = document.getElementById("1");
+  console.log(nav1);
+  // const [active, setActive] = useState("");
+  // useEffect(()=>{
+  //   const nav1 = document.getElementById("1");
+  //   const class1 = nav1.className;
+  //   if (class1 === "nav-active") {
+  //      setActive("bright")
+  //   } else {
+  //     setActive("dull")
+  //   };
     
-  }, []) ;
+  // }, []) ;
 
   return (
     <Router>
       <StateContext.Provider value="">
+        <Test/>
         <Header />
       <div className="container">
         <div className="pages">
@@ -90,4 +91,5 @@ import Header from "./Pages/Header";
        </StateContext.Provider>
     </Router>
   );
+
 }
