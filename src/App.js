@@ -37,7 +37,6 @@ export const StateContext = React.createContext();
   return (
     <Router>
       <StateContext.Provider value="">
-        <Test/>
         <Header />
       <div className="container">
         <div className="pages">
