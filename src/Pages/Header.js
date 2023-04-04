@@ -4,14 +4,20 @@ import githubIcon from "../Images/githubIcon.png";
 import linkedinIcon from "../Images/linkedinIcon.png";
 
 function Header() {
+  const dots = document.getElementsByClassName("dot");
+  console.log(dots);
+
+  const [dotArray, setDotArray] = useState([dots]);
+
+
   return (
     <header className="header">
       <div className="website">NICOLA GALASSI</div>
       <div className="dots">
-        <div className="dot1"></div>
-        <div className="dot2"></div>
-        <div className="dot3"></div>
-        <div className="dot4"></div>
+        <div id="dot1" className="dot"></div>
+        <div id="dot2" className="dot"></div>
+        <div id="dot3" className="dot"></div>
+        <div id="dot4" className="dot"></div>
       </div>
       <div className="icons">
         <a
