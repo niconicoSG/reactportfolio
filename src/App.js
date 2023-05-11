@@ -19,8 +19,15 @@ import Header from "./Pages/Header";
 export const StateContext = React.createContext();
 
 export default function App() {
+  useEffect(() => {
+    const dots = document.getElementsByClassName("dot");
+    console.log(dots.length);
+    const links = document.getElementsByClassName("link");
+    console.log(links);
+  });
+
   const [count, setCount] = useState(0);
-  
+
   // useEffect(() => {
   //   (async function () {
   //     try {
@@ -48,7 +55,7 @@ export default function App() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "nav-active" : "nav-inactive"
+              isActive ? "nav-active link" : "nav-inactive link"
             }
             id="1"
             onClick={() => setCount(count + 1)}

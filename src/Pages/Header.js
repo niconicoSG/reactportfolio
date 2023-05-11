@@ -4,12 +4,6 @@ import githubIcon from "../Images/githubIcon.png";
 import linkedinIcon from "../Images/linkedinIcon.png";
 
 function Header() {
-  const dots = document.getElementsByClassName("dot");
-  console.log(dots.length);
-
-  const [dotArray, setDotArray] = useState([dots]);
-
-  console.log(dotArray.length);
 
   return (
     <header className="header">
