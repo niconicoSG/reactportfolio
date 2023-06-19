@@ -2,7 +2,7 @@ import { React, useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import githubIcon from "../Images/githubIcon.png";
 import linkedinIcon from "../Images/linkedinIcon.png";
-
+ 
 function Header() {
 
   return (
@@ -31,7 +31,7 @@ function Header() {
         </a>
       </div>
     </header>
-  );
+  );  
 }
 
 export default Header;
