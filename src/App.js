@@ -21,13 +21,16 @@ export const StateContext = React.createContext();
 export default function App() {
   const [isOn, setIsOn] = useState(false);
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    const dots = document.getElementsByClassName("dot");
-    console.log(dots.length);
-    const links = document.getElementsByClassName("link");
-    console.log(links);
-    console.log(count);
-  }, [count]);
+
+  const CheckButtons = () => {
+    useEffect(() => {
+      const dots = document.getElementsByClassName("dot");
+      console.log(dots.length);
+      const links = document.getElementsByClassName("link");
+      console.log(links);
+      console.log(count);
+    }, [count]);
+  };
 
   return (
     <Router>
@@ -50,7 +53,7 @@ export default function App() {
               isActive ? "nav-active link" : "nav-inactive link"
             }
             id="1"
-            onClick={() => setCount(count + 1)}
+            onClick={() => CheckButtons()}
           >
             Home
           </NavLink>
