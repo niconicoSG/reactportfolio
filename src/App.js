@@ -7,7 +7,7 @@ import {
   Link,
   NavLink,
   useNavigate,
-  useLocation, 
+  useLocation,
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -19,6 +19,7 @@ import Header from "./Pages/Header";
 export const StateContext = React.createContext();
 
 export default function App() {
+  const [isOn, setIsOn] = useState(false);
   const [count, setCount] = useState(0);
   useEffect(() => {
     const dots = document.getElementsByClassName("dot");
@@ -59,6 +60,7 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="2"
+            onClick={() => setCount(count + 1)}
           >
             About
           </NavLink>
@@ -68,6 +70,7 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="3"
+            onClick={() => setCount(count + 1)}
           >
             Work
           </NavLink>
@@ -77,7 +80,8 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="4"
-          > 
+            onClick={() => setCount(count + 1)}
+          >
             Contact
           </NavLink>
         </nav>

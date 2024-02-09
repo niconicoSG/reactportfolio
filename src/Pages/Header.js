@@ -2,17 +2,16 @@ import { React, useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import githubIcon from "../Images/githubIcon.png";
 import linkedinIcon from "../Images/linkedinIcon.png";
- 
-function Header() {
 
+function Header() {
   return (
     <header className="header">
       <div className="website">NICOLA GALASSI</div>
       <div className="dots">
-        <div id="dot1" className="dot"></div>
-        <div id="dot2" className="dot"></div>
-        <div id="dot3" className="dot"></div>
-        <div id="dot4" className="dot"></div>
+        <div id="dot1" className="dot1"></div>
+        <div id="dot2" className="dot1"></div>
+        <div id="dot3" className="dot1"></div>
+        <div id="dot4" className="dot1"></div>
       </div>
       <div className="icons">
         <a
@@ -31,7 +30,7 @@ function Header() {
         </a>
       </div>
     </header>
-  );  
+  );
 }
 
 export default Header;

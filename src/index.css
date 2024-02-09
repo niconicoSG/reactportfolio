@@ -122,12 +122,12 @@ body > * {
   row-gap: 1rem;
 }
 
-/* .dot1 {
+.dot1 {
    height: 0.8rem;
    width: 0.8rem;
    border-radius: 50%;
    background-color: hsl(0, 0%, 22%);
-} */
+}
 
 .dull {
   height: 0.8rem;
