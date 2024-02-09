@@ -22,7 +22,7 @@ export default function App() {
   const [isOn, setIsOn] = useState(false);
   const [count, setCount] = useState(0);
 
-  const CheckButtons = () => {
+  const CheckButtons = (number) => {
     useEffect(() => {
       const dots = document.getElementsByClassName("dot");
       console.log(dots.length);
@@ -53,7 +53,7 @@ export default function App() {
               isActive ? "nav-active link" : "nav-inactive link"
             }
             id="1"
-            onClick={() => CheckButtons()}
+            onClick={() => CheckButtons(1)}
           >
             Home
           </NavLink>
@@ -63,7 +63,7 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="2"
-            onClick={() => setCount(count + 1)}
+            onClick={() => CheckButtons(2)}
           >
             About
           </NavLink>
@@ -73,7 +73,7 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="3"
-            onClick={() => setCount(count + 1)}
+            onClick={() => CheckButtons(3)}
           >
             Work
           </NavLink>
@@ -83,7 +83,7 @@ export default function App() {
               isActive ? "nav-active" : "nav-inactive"
             }
             id="4"
-            onClick={() => setCount(count + 1)}
+            onClick={() => CheckButtons(4)}
           >
             Contact
           </NavLink>
