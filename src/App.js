@@ -23,8 +23,9 @@ export default function App() {
   const [count, setCount] = useState(0);
 
   const CheckButtons = (number) => {
+    console.log(number);
     useEffect(() => {
-      const dots = document.getElementsByClassName("dot");
+      const dots = document.getElementsByClassName("dot1");
       console.log(dots.length);
       const links = document.getElementsByClassName("link");
       console.log(links);
