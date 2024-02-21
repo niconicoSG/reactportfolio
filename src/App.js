@@ -24,13 +24,13 @@ export default function App() {
 
   const CheckButtons = (number) => {
     console.log(number);
-    useEffect(() => {
-      const dots = document.getElementsByClassName("dot1");
-      console.log(dots.length);
-      const links = document.getElementsByClassName("link");
-      console.log(links);
-      console.log(count);
-    }, [count]);
+    // useEffect(() => {
+    //   const dots = document.getElementsByClassName("dot1");
+    //   console.log(dots.length);
+    //   const links = document.getElementsByClassName("link");
+    //   console.log(links);
+    //   console.log(count);
+    // }, [count]);
   };
 
   return (
