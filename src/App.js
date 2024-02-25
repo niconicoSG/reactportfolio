@@ -20,10 +20,12 @@ export const StateContext = React.createContext();
 
 export default function App() {
   const [isOn, setIsOn] = useState(false);
-  const [count, setCount] = useState(0);
+  const [isOff, setIsOff] = useState(false);
 
   const CheckButtons = (number) => {
     console.log(number);
+    setIsOn(number);
+    console.log(isOn);
     // useEffect(() => {
     //   const dots = document.getElementsByClassName("dot1");
     //   console.log(dots.length);
